@@ -44,7 +44,7 @@ vector<int> extract_shortest_path(const vector<int> & distances, const vector<in
     int position = destination;
     while(distances[position] != 0){
         result.push_back(position);
-        position = distances[position];
+        position = previous[position];
     }
     result.push_back(position);
     std::reverse(result.begin(), result.end());
@@ -55,4 +55,5 @@ void print_path(const vector<int> &v, int total){
     for(size_t i = 0; i < v.size(); ++i){
         cout << v[i] << " ";
     }
+    cout << endl << total <<endl;
 }
