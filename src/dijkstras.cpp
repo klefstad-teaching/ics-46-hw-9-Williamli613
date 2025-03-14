@@ -22,7 +22,7 @@ vector<int> dijkstra_shortest_path(const Graph& G, int source, vector<int>& prev
     priority_queue<pair<int, int>> minHeap;
     minHeap.push({source,0});
     while(!minHeap.empty()){
-        int u = minHeap.top().first;
+        int u = minHeap.top().second;
         minHeap.pop();
         if(visited[u]) continue;
         visited[u] = true;
