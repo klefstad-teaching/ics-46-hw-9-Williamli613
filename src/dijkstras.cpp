@@ -6,13 +6,6 @@
 #include <vector>
 constexpr int UNDEFINED = -1;
 
-struct Node{
-    int vertex;
-    int weight;
-    Node(int vertex, int weight) : vertex(vertex), weight(weight) {}
-};
-
-
 vector<int> dijkstra_shortest_path(const Graph& G, int source, vector<int>& previous){
     int num_Vertices = G.size();
     vector<int> distances(num_Vertices, INF);
